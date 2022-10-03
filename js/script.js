@@ -12,6 +12,7 @@ function activeVote(event) {
     item.classList.remove("active");
   });
   this.classList.add("active");
+  error.classList.add("hidden");
   resultVoteText = this.innerText;
 }
 
@@ -19,11 +20,11 @@ votes.forEach((item) => {
   item.addEventListener("click", activeVote);
 });
 
-function sendVote(event) {
+function sendVote() {
   if (resultVoteText) {
     initialPage.classList.add("hidden");
     thankYouPage.classList.remove("hidden");
-    resultVote.innerText = " " + resultVoteText + " ";
+    resultVote.innerText = ` ${resultVoteText} `;
   } else {
     error.classList.remove("hidden");
   }
