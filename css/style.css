@@ -1,0 +1,162 @@
+@import url("./reset.css");
+
+:root {
+  --primary-orange: hsl(25, 97%, 53%);
+  --neutral-white: hsl(0, 0%, 100%);
+  --neutral-light-grey: hsl(217, 12%, 63%);
+  --neutral-medium-grey: hsl(216, 12%, 54%);
+  --neutral-dark-blue: hsl(213, 19%, 18%);
+  --neutral-very-dark-blue: hsl(216, 12%, 8%);
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 100%;
+  min-height: 100vh;
+  background: var(--neutral-very-dark-blue);
+  color: var(--neutral-white);
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 410px;
+  max-height: 420px;
+  background: var(--neutral-dark-blue);
+  padding: 30px 40px;
+  border-radius: 20px;
+}
+
+.img {
+  background: #29323d;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+
+.img img {
+  display: block;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.info h1,
+.thank-you h1 {
+  font-size: 1.75rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.info p,
+.thank-you p {
+  color: var(--neutral-light-grey);
+  line-height: 1.5;
+  max-width: 34ch;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.votes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.votes a {
+  display: flex;
+  background: #29323d;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  color: var(--neutral-white);
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.votes a:hover {
+  background: var(--neutral-light-grey);
+  transform: translateY(-2.5px);
+}
+
+.votes a.active {
+  background: var(--primary-orange);
+}
+
+.info button {
+  width: 100%;
+  display: block;
+  text-align: center;
+  border-radius: 50px;
+  cursor: pointer;
+  background: var(--primary-orange);
+  color: var(--neutral-white);
+  padding: 15px 5px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 0.875rem;
+  transition: 0.3s;
+  border: none;
+}
+
+.info button:hover {
+  background: var(--neutral-white);
+  color: var(--primary-orange);
+}
+
+.thank-you {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.thank-you p:first-child {
+  background: #29323d;
+  padding: 10px 20px;
+  border-radius: 50px;
+  margin-top: 20px;
+  color: var(--primary-orange);
+}
+
+.thank-you p span {
+  font-weight: 700;
+}
+
+.thank-you p:last-child {
+  margin: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.error p {
+  color: #fc9246;
+  font-size: 1.125rem;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 50px;
+  margin: 0;
+}
+
+@media (max-width: 440px) {
+  .container {
+    padding: 15px 20px;
+  }
+}
